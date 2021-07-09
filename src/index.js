@@ -1,14 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
+import { store } from './store/configureStore'
 import { Provider } from 'react-redux'
 import App from './App'
 
-// import registerServiceWorker from './registerServiceWorker'
-
 import './index.css'
-
-const store = createStore(() => { }, {}) // [1]
 
 ReactDOM.render(
     <Provider store={store}>
@@ -16,4 +12,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 )
-// registerServiceWorker()
